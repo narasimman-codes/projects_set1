@@ -12,7 +12,7 @@ def delete_files_with_extensions(folder, extensions):
     # Iterate through files in the folder and subfolders
     for root, _, files in os.walk(folder):
         for file in files:
-            if any(file.endswith(ext) for ext in extensions):
+            if any(file.lower().endswith(ext.lower()) for ext in extensions):
                 file_path = os.path.join(root, file)
                 try:
                     os.remove(file_path)
