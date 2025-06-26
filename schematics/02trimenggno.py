@@ -1,3 +1,5 @@
+# this script funality will be merged to file manager application - prism-nest
+
 import os
 
 def trim_filenames(folder_path, num_characters):
